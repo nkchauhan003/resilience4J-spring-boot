@@ -15,13 +15,8 @@ public class InventoryController {
     @GetMapping("/{productId}")
     public Inventory getInventory(@PathVariable int productId) {
         log.info("Request received for productId: " + productId);
-        if(true)
-            throw  new RuntimeException();
-        try {
-            Thread.sleep(400);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        if (true)
+            throw new RuntimeException();
         return new Inventory(productId, (int) (Math.random() * (100 - 1)), Math.random() * (500 - 300));
 
     }
