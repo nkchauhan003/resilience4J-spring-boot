@@ -17,6 +17,11 @@ public class InventoryController {
         log.info("Request received for productId: " + productId);
         if (true)
             throw new RuntimeException();
+        /*try {
+            Thread.sleep(400);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }*/
         return new Inventory(productId, (int) (Math.random() * (100 - 1)), Math.random() * (500 - 300));
 
     }
