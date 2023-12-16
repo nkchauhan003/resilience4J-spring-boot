@@ -8,7 +8,6 @@ import lombok.Setter;
 @Setter
 @RequiredArgsConstructor
 public class Client {
-
     protected String host;
     protected String uri;
 }

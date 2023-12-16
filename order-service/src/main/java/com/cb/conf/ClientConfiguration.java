@@ -10,7 +10,6 @@ import org.springframework.web.reactive.function.client.WebClient;
 import reactor.netty.http.HttpProtocol;
 import reactor.netty.http.client.HttpClient;
 import reactor.netty.resources.ConnectionProvider;
-import reactor.util.retry.Retry;
 
 import java.time.Duration;
 
@@ -56,6 +55,6 @@ public class ClientConfiguration {
     private static ExchangeFilterFunction retry(Integer retries, Integer retryDelayMilis) {
         /*return (request, next) -> next.exchange(request).retryWhen(
                 Retry.backoff(retries, Duration.ofMillis(retryDelayMilis)));*/
-        return  (request, next) -> next.exchange(request).retry(3);
+        return (request, next) -> next.exchange(request).retry(3);
     }
 }

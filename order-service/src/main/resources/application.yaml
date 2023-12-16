@@ -17,8 +17,8 @@ inventory-ms:
     minimum-number-Of-calls: 5
     slow-call-rate-threshold: 50
     slow-call-duration-threshold-milis: 2000
-    wait-duration-in-open-state-milis: 1000
-    permitted-number-of-calls-in-half-open-state: 5
+    wait-duration-in-open-state-milis: 5000
+    permitted-number-of-calls-in-half-open-state: 3
     sliding-window-size: 10
     timeout-duration-milis: 10000
 client:
